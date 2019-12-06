@@ -1,4 +1,8 @@
-#danielobembe/personal_website:0.0
+#danielobembe/personal_website:1.0
 FROM jekyll/jekyll
 
-CMD ["echo", "hello world"]
+COPY . /srv/jekyll
+
+EXPOSE 4000
+
+CMD ["jekyll", "serve"]
